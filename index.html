@@ -38,6 +38,16 @@
             <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
             <a href="#projects" class="btn btn-secondary">Lihat Proyek</a>
           </div>
+          <div class="hero-highlights">
+            <div class="highlight-card">
+              <h4>Fokus Utama</h4>
+              <p>Portfolio, branding digital, web responsif, dan pengalaman pengguna.</p>
+            </div>
+            <div class="highlight-card">
+              <h4>Tools Favorit</h4>
+              <p>HTML, CSS, JavaScript, Git, dan deploy ke GitHub Pages.</p>
+            </div>
+          </div>
         </div>
         <div class="hero-card">
           <div class="hero-card__avatar">SA</div>
@@ -63,6 +73,27 @@
         <div class="about-text">
           <p>Saya adalah seorang pengembang web dengan pengalaman membuat portofolio personal, situs perusahaan, dan aplikasi landing page. Fokus saya adalah antar muka yang menarik dan performa yang cepat.</p>
           <p>Saya mahir dalam HTML, CSS, JavaScript, dan mampu menerapkan desain responsif, animasi halus, serta form kontak yang siap dipakai.</p>
+          <div class="skill-list">
+            <span>UI/UX</span>
+            <span>Responsive Web</span>
+            <span>SEO</span>
+            <span>Performance</span>
+            <span>Branding</span>
+          </div>
+          <div class="skill-bars">
+            <div>
+              <p>HTML & CSS</p>
+              <div class="progress-bar"><span style="width: 95%"></span></div>
+            </div>
+            <div>
+              <p>JavaScript</p>
+              <div class="progress-bar"><span style="width: 88%"></span></div>
+            </div>
+            <div>
+              <p>UI Design</p>
+              <div class="progress-bar"><span style="width: 90%"></span></div>
+            </div>
+          </div>
           <div class="about-stats">
             <div>
               <h3>5+</h3>
@@ -98,20 +129,24 @@
       </div>
       <div class="container service-grid">
         <article class="service-card">
+          <span class="service-icon">🎨</span>
           <h3>Desain Portofolio</h3>
-          <p>Desain modern dan fokus pada personal branding sehingga karya Anda terlihat profesional.</p>
+          <p>Desain visual modern dengan fokus personal branding sehingga karya Anda tampil menonjol.</p>
         </article>
         <article class="service-card">
+          <span class="service-icon">💻</span>
           <h3>Pembuatan Website</h3>
-          <p>Website statis cepat, SEO friendly, mudah diakses, dan responsif di semua perangkat.</p>
+          <p>Website statis cepat, SEO friendly, mudah diakses, dan responsif pada semua perangkat.</p>
         </article>
         <article class="service-card">
+          <span class="service-icon">⚡</span>
           <h3>Pengembangan Frontend</h3>
-          <p>Interaksi dinamis, navigasi mulus, dan elemen visual yang memikat pelanggan.</p>
+          <p>Interaksi dinamis dan animasi halus untuk pengalaman pengguna yang lebih baik.</p>
         </article>
         <article class="service-card">
+          <span class="service-icon">🚀</span>
           <h3>Optimasi Kinerja</h3>
-          <p>Mempercepat loading, meningkatkan pengalaman pengguna, dan meminimalkan ukuran berkas.</p>
+          <p>Loading cepat, ukuran berkas terjaga, dan performa maksimal untuk pengguna nyata.</p>
         </article>
       </div>
     </section>
@@ -121,21 +156,32 @@
         <span class="section-label">Proyek</span>
         <h2>Contoh karya terbaik</h2>
       </div>
+      <div class="container project-controls">
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="webdesign">Web Design</button>
+          <button class="filter-btn" data-filter="landing">Landing Page</button>
+          <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+        </div>
+      </div>
       <div class="container project-grid">
-        <article class="project-card">
+        <article class="project-card" data-category="webdesign">
           <span class="project-tag">Web Design</span>
           <h3>Website Portofolio Pribadi</h3>
           <p>Halaman portofolio dengan tata letak responsif, animasi halus, dan kemampuan menampilkan karya secara elegan.</p>
+          <a href="#contact" class="btn btn-secondary project-link">Lihat Detail</a>
         </article>
-        <article class="project-card">
+        <article class="project-card" data-category="landing">
           <span class="project-tag">Landing Page</span>
           <h3>Landing Page Bisnis</h3>
           <p>Desain terfokus untuk konversi, dengan CTA jelas, testimonial, dan fitur responsif.</p>
+          <a href="#contact" class="btn btn-secondary project-link">Lihat Detail</a>
         </article>
-        <article class="project-card">
+        <article class="project-card" data-category="dashboard">
           <span class="project-tag">Aplikasi Web</span>
           <h3>Dashboard Sederhana</h3>
           <p>Antar muka dashboard informatif dengan struktur kartus, statistik, dan navigasi mudah.</p>
+          <a href="#contact" class="btn btn-secondary project-link">Lihat Detail</a>
         </article>
       </div>
     </section>
@@ -145,19 +191,27 @@
         <span class="section-label">Testimoni</span>
         <h2>Klien puas berbicara</h2>
       </div>
-      <div class="container testimonial-grid">
-        <div class="testimonial-card">
-          <p>"Desainnya sangat profesional dan cepat selesai. Sangat membantu memperkuat identitas online saya."</p>
-          <h4>Rina, Pemilik Brand</h4>
+      <div class="container testimonial-slider">
+        <button class="testimonial-nav prev" aria-label="Testimonial sebelumnya">‹</button>
+        <div class="testimonial-track">
+          <article class="testimonial-slide">
+            <p>"Desainnya sangat profesional dan cepat selesai. Sangat membantu memperkuat identitas online saya."</p>
+            <h4>Rina, Pemilik Brand</h4>
+          </article>
+          <article class="testimonial-slide">
+            <p>"Komunikasi lancar dan hasilnya sesuai ekspektasi. Website kami kini tampil lebih modern dan responsif."</p>
+            <h4>Budi, Startup</h4>
+          </article>
+          <article class="testimonial-slide">
+            <p>"Sangat direkomendasikan. Proyek selesai tepat waktu, dan kualitasnya bagus sekali."</p>
+            <h4>Tania, Freelancer</h4>
+          </article>
+          <article class="testimonial-slide">
+            <p>"Responsif terhadap masukan dan selalu menjaga kualitas desain sampai selesai."</p>
+            <h4>Aditya, UKM</h4>
+          </article>
         </div>
-        <div class="testimonial-card">
-          <p>"Komunikasi lancar dan hasilnya sesuai ekspektasi. Website kami kini tampil lebih modern dan responsif."</p>
-          <h4>Budi, Startup</h4>
-        </div>
-        <div class="testimonial-card">
-          <p>"Sangat direkomendasikan. Proyek selesai tepat waktu, dan kualitasnya bagus sekali."</p>
-          <h4>Tania, Freelancer</h4>
-        </div>
+        <button class="testimonial-nav next" aria-label="Testimonial berikutnya">›</button>
       </div>
     </section>
 
@@ -170,11 +224,20 @@
         <div class="contact-info">
           <h3>Hubungi saya langsung</h3>
           <p>Silakan kirim pesan melalui formulir di samping, atau gunakan email dan nomor telepon berikut.</p>
-          <ul>
-            <li><strong>Email:</strong> hello@example.com</li>
-            <li><strong>Telepon:</strong> +62 812 3456 7890</li>
-            <li><strong>Lokasi:</strong> Jakarta, Indonesia</li>
-          </ul>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <strong>Email</strong>
+              <p>hello@example.com</p>
+            </div>
+            <div class="contact-card">
+              <strong>Telepon</strong>
+              <p>+62 812 3456 7890</p>
+            </div>
+            <div class="contact-card">
+              <strong>Lokasi</strong>
+              <p>Jakarta, Indonesia</p>
+            </div>
+          </div>
         </div>
         <form id="contact-form" class="contact-form">
           <label for="name">Nama</label>
@@ -182,6 +245,15 @@
 
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+
+          <label for="service">Layanan</label>
+          <select id="service" name="service" required>
+            <option value="">Pilih layanan</option>
+            <option value="desain">Desain Portofolio</option>
+            <option value="website">Pembuatan Website</option>
+            <option value="frontend">Pengembangan Frontend</option>
+            <option value="optimasi">Optimasi Kinerja</option>
+          </select>
 
           <label for="message">Pesan</label>
           <textarea id="message" name="message" placeholder="Tulis pesan Anda" rows="5" required></textarea>
